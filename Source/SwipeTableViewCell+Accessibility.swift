@@ -16,7 +16,7 @@ extension SwipeTableViewCell {
 
         return 1
     }
-    
+
     /// :nodoc:
     open override func accessibilityElement(at index: Int) -> Any? {
         guard state != .center else {
@@ -25,7 +25,7 @@ extension SwipeTableViewCell {
 
         return actionsView
     }
-    
+
     /// :nodoc:
     open override func index(ofAccessibilityElement element: Any) -> Int {
         guard state != .center else {
@@ -43,12 +43,12 @@ extension SwipeTableViewCell {
             guard let tableView = tableView, let indexPath = tableView.indexPath(for: self) else {
                 return super.accessibilityCustomActions
             }
-            
+
             let leftActions = delegate?.tableView(tableView, editActionsForRowAt: indexPath, for: .left) ?? []
             let rightActions = delegate?.tableView(tableView, editActionsForRowAt: indexPath, for: .right) ?? []
-            
+
             let actions = [rightActions.first, leftActions.first].flatMap({ $0 }) + rightActions.dropFirst() + leftActions.dropFirst()
-            
+
             if actions.count > 0 {
                 return actions.map({ SwipeAccessibilityCustomAction(action: $0,
                                                                     indexPath: indexPath,
@@ -58,23 +58,23 @@ extension SwipeTableViewCell {
                 return super.accessibilityCustomActions
             }
         }
-        
+
         set {
             super.accessibilityCustomActions = newValue
         }
     }
-    
+
     func performAccessibilityCustomAction(accessibilityCustomAction: SwipeAccessibilityCustomAction) -> Bool {
         guard let tableView = tableView else { return false }
-        
+
         let swipeAction = accessibilityCustomAction.action
-        
+
         swipeAction.handler?(swipeAction, accessibilityCustomAction.indexPath)
-        
+
         if swipeAction.style == .destructive {
             tableView.deleteRows(at: [accessibilityCustomAction.indexPath], with: .fade)
         }
-        
+
         return true
     }
 }
@@ -82,15 +82,15 @@ extension SwipeTableViewCell {
 class SwipeAccessibilityCustomAction: UIAccessibilityCustomAction {
     let action: SwipeAction
     let indexPath: IndexPath
-    
+
     init(action: SwipeAction, indexPath: IndexPath, target: Any, selector: Selector) {
         guard let name = action.accessibilityLabel ?? action.title ?? action.image?.accessibilityIdentifier else {
             fatalError("You must provide either a title or an image for a SwipeAction")
         }
-        
+
         self.action = action
         self.indexPath = indexPath
-        
+
         super.init(name: name, target: target, selector: selector)
     }
 }

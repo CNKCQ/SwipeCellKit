@@ -15,6 +15,8 @@
 		3F234B0F1E44AC2600E22A38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F234B091E44AC2600E22A38 /* Assets.xcassets */; };
 		3F234B171E44B29B00E22A38 /* SwipeCellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F234B031E44AB7A00E22A38 /* SwipeCellKit.framework */; };
 		3F234B181E44B29B00E22A38 /* SwipeCellKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F234B031E44AB7A00E22A38 /* SwipeCellKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAD96B8D1ED4006600779214 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD96B8C1ED4006600779214 /* TableViewController.swift */; };
+		AAD96B8F1ED4042E00779214 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD96B8E1ED4042E00779214 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		3F234B071E44AC2600E22A38 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3F234B081E44AC2600E22A38 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F234B091E44AC2600E22A38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAD96B8C1ED4006600779214 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		AAD96B8E1ED4042E00779214 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 				3F234B051E44AC2600E22A38 /* MailViewController.swift */,
 				3F234B061E44AC2600E22A38 /* Data.swift */,
 				3F234B101E44AC3400E22A38 /* Supporting Files */,
+				AAD96B8C1ED4006600779214 /* TableViewController.swift */,
+				AAD96B8E1ED4042E00779214 /* CustomCell.swift */,
 			);
 			name = Source;
 			path = MailExample;
@@ -213,7 +219,9 @@
 			files = (
 				3F234B0A1E44AC2600E22A38 /* AppDelegate.swift in Sources */,
 				3F234B0C1E44AC2600E22A38 /* Data.swift in Sources */,
+				AAD96B8F1ED4042E00779214 /* CustomCell.swift in Sources */,
 				3F234B0B1E44AC2600E22A38 /* MailViewController.swift in Sources */,
+				AAD96B8D1ED4006600779214 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

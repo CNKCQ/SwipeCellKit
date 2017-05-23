@@ -7,13 +7,13 @@
 
 import UIKit
 
-// MARK: - Internal 
+// MARK: - Internal
 
 protocol Swipeable {
     var actionsView: SwipeActionsView? { get }
-    
+
     var state: SwipeState { get }
-    
+
     var frame: CGRect { get }
 }
 
@@ -25,10 +25,10 @@ enum SwipeState: Int {
     case right
     case dragging
     case animatingToCenter
-    
+
     init(orientation: SwipeActionsOrientation) {
         self = orientation == .left ? .left : .right
     }
-    
+
     var isActive: Bool { return self != .center }
 }

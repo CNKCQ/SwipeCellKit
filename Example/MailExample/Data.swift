@@ -20,7 +20,7 @@ class Email {
         self.body = body
         self.date = date
     }
-    
+
     var relativeDateString: String {
         if Calendar.current.isDateInToday(date) {
             let formatter = DateFormatter()
@@ -51,6 +51,5 @@ let mockEmails: [Email] = [
     Email(from: "IFTTT", subject: "See what’s new & notable on IFTTT", body: "See what’s new & notable on IFTTT. To disable these emails, sign in to manage your settings or unsubscribe.", date: Calendar.now(addingDays: -5)),
     Email(from: "Westin Vacations", subject: "Your Westin exclusive expires January 11", body: "Last chance to book a captivating 5-day, 4-night vacation in Rancho Mirage for just $389. Learn more. No images? CLICK HERE", date: Calendar.now(addingDays: -6)),
     Email(from: "Nugget Markets", subject: "Nugget Markets Weekly Specials Starting February 15, 2017", body: "Scan & Save. For this week’s Secret Special, let’s “brioche” the subject of breakfast. This Friday and Saturday, February 24–25, buy one loaf of Euro Classic Brioche and get one free! This light, soft, hand-braided buttery brioche loaf from France is perfect for an authentic French toast feast. Make Christmas morning extra special with our Signature Recipe for Crème Brûlée French Toast Soufflé!", date: Calendar.now(addingDays: -7)),
-    Email(from: "GeekDesk", subject: "We have some exciting things happening at GeekDesk!", body: "Wouldn't everyone be so much happier if we all owned GeekDesks?", date: Calendar.now(addingDays: -8))
+    Email(from: "GeekDesk", subject: "We have some exciting things happening at GeekDesk!", body: "Wouldn't everyone be so much happier if we all owned GeekDesks?", date: Calendar.now(addingDays: -8)),
 ]
-
